@@ -16,7 +16,9 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
 
     @Override
     public WebDriver createDriver(Object[] args) {
-        WebDriver driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", "/Users/sheetalsingh/Downloads/geckodriver");
+		WebDriver driver = new FirefoxDriver();
+		
         if (args.length > 0) {
             if (args[0] != null && args[0] instanceof TestDevice) {
                 TestDevice device = (TestDevice)args[0];

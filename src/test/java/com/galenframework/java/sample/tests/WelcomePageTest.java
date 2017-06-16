@@ -16,7 +16,7 @@ public class WelcomePageTest extends GalenTestBase {
         checkLayout("/specs/welcomePage.spec", device.getTags());
     }
 
-    @Test(dataProvider = "devices")
+    //@Test(dataProvider = "devices")
     public void loginPage_shouldLookGood_onDevice(TestDevice device) throws IOException {
         load("/");
         getDriver().findElement(By.xpath("//button[.='Login']")).click();
